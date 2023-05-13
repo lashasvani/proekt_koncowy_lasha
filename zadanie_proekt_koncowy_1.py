@@ -14,6 +14,17 @@ Po zrobieniu zadania, pushujemy wynik na nowy branch który stworzyliśmy i twor
 po akceptacji trenera
 """
 
-text = "lasha tkeshelashvili"
-most_frequent = max(set(text), key=text.count)
-print(most_frequent)
+# text = "lasha tkeshelashvili"
+# most_frequent = max(set(text), key=text.count)
+# print(most_frequent)
+
+def max_frequent_letter(text):
+    max_number  = 0
+    any_letter = ""
+    for letter in text:
+        number = text.count(letter)
+        if max_number < number:
+            max_number = number
+            any_letter = letter
+    return f"{any_letter} = {max_number}"
+print(max_frequent_letter("laasha tkeshelashvili"))
